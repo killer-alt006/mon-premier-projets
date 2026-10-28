@@ -1,16 +1,25 @@
-print("=== ASSISTANT FIRMIN ===")
+print("=== JARVIS DE FIRMIN ===")
 
-nom = input("Comment tu t'appelles ? ")
+nom = input("Comment t'appelles-tu ? ")
 
-choix = input("Tu préfères la médecine ou l'informatique ? ")
+print("Bonjour", nom, "!")
+print("Je suis JARVIS, ton assistant personnel.")
 
-choix = choix.lower()
+while True:
+    commande = input("Que puis-je faire pour toi ? ")
 
-if choix == "médecine":
-    print("Bonjour " + nom + ", futur médecin !")
+    if commande.lower() == "bonjour":
+        print("Bonjour ! Je suis à ton service.")
 
-elif choix == "informatique":
-    print("Bonjour " + nom + ", futur développeur !")
+    elif commande.lower() == "qui es-tu":
+        print("Je suis JARVIS, ton assistant personnel.")
 
-else:
-    print("Bonjour " + nom + ", ton choix est intéressant !")
+    elif commande.lower() == "medecine":
+        print("Je peux t'aider à réviser tes cours de médecine.")
+
+    elif commande.lower() == "stop":
+        print("À bientôt, chef !")
+        break
+
+    else:
+        print("Je ne connais pas encore cette commande.")
